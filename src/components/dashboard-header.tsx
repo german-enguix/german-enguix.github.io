@@ -1,4 +1,3 @@
-import { auth } from "@/auth"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import {
@@ -11,12 +10,13 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { User } from "lucide-react"
 
-export async function DashboardHeader() {
-  const session = await auth()
-  const user = session?.user
-
-  if (!user) return null
-
+export function DashboardHeader() {
+  // Static placeholder user
+  const user = {
+    name: "Usuario",
+    email: "usuario@email.com",
+    image: undefined,
+  }
   const initials = user.name
     ?.split(" ")
     .map((n) => n[0])

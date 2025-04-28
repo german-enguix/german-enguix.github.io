@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/test-fintech',
-  assetPrefix: '/test-fintech/',
+  basePath: '/german-enguix.github.io',
+  assetPrefix: '/german-enguix.github.io/',
   eslint: {
     ignoreDuringBuilds: true,
   },

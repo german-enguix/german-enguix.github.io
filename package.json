@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "DISABLE_ESLINT_PLUGIN=true next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy to GitHub Pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.7",

@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,11 +18,10 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          primary: "#0F172A",
-          secondary: "#6C63FF",
-          light: "#F8FAFC",
-          muted: "#64748B",
-          accent: "#818CF8",
+          primary: "oklch(var(--color-primary) / <alpha-value>)",
+          secondary: "oklch(var(--color-secondary) / <alpha-value>)",
+          muted: "oklch(var(--color-muted) / <alpha-value>)",
+          light: "oklch(var(--color-background) / <alpha-value>)",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -40,10 +39,6 @@ const config: Config = {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
